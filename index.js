@@ -60,7 +60,8 @@ app.get('/api/sales', (req, res) => {
 
 
 
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
@@ -68,7 +69,7 @@ app.listen(PORT, () => {
 
 // app.listen(PORT, () => console.log(`API running on port ${PORT}`));
 
-//  http://localhost:3000
-//  http://localhost:3000/api/projects
-//  http://localhost:3000/api/sales
+//  http://localhost:8080
+//  http://localhost:8080/api/projects
+//  http://localhost:8080/api/sales
 
