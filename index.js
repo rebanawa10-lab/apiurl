@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.get('/', async (req, res) => { // 
  	res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello from Node.js Portfolio API!\n');
+    res.end('Node.js API running!\n');
 });
 
 app.get('/api/projects', (req, res) => {
@@ -60,16 +60,15 @@ app.get('/api/sales', (req, res) => {
 
 
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`API running on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
 
-//  http://localhost:5000
-//  http://localhost:5000/api/projects
-//  http://localhost:5000/api/sales
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
+// app.listen(PORT, () => console.log(`API running on port ${PORT}`));
 
-//  http://localhost:5000/api/contact
+//  http://localhost:3000
+//  http://localhost:3000/api/projects
+//  http://localhost:3000/api/sales
 
-// app.listen(PORT, () => {
-//   console.log(`Node.js API listening at http://localhost:${port}`);
-// });
